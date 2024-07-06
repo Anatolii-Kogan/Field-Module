@@ -15,7 +15,7 @@ namespace board
 	public:
 		~Cell() { DeleteChessman(); }
 
-		const auto* GetChessman() { return _chessman; }
+		auto* GetChessman() { return _chessman; }
 		void SetChessman(chessmans::Chessman* chessman)
 		{
 			if (_chessman != nullptr)
