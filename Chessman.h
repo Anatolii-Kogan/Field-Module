@@ -11,6 +11,8 @@ namespace chessmans
 		int _forwardX;
 		int _forwardY;
 
+		virtual void OnBehaviorSet() {};
+
 	protected:
 		IChessmanBehavior* _behavior{ nullptr };
 
@@ -41,7 +43,6 @@ namespace chessmans
 			_behavior = behavior;
 			OnBehaviorSet();
 		}
-		virtual void OnBehaviorSet() {};
 
 		virtual bool ValidateMove(int directionX, int directionY) const
 		{
